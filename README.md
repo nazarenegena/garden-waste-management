@@ -1,54 +1,33 @@
-# React + TypeScript + Vite
+# Garden Waste Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Garden Waste Management is a page redesign of the **Skip Selection** page from [We Want Waste](https://wewantwaste.co.uk/)
 
-Currently, two official plugins are available:
+This is a Coding Challenge.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Objective
 
-## Expanding the ESLint configuration
+- **Maintaining the existing functional integrity.**
+- **Improving the overall look, feel and hierarchy.**
+- **Enhancing usability and accessibility across devices.**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **[Vite](https://vitejs.dev/)** – A lightning-fast development and build tool.
+- **[React.js](https://reactjs.org/)** – Component-based UI framework.
+- **[TypeScript](https://www.typescriptlang.org/)** – Static type-checking for scalable code.
+- **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first styling for responsive design.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- A responsive redesign optimized for both **mobile** and **desktop** across devices
+- Clean and maintainable React code
+- Enhanced user experience with improved layout and visual hierarchy.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🧠 My Approach
+
+- Brake down the UI into reusable and maintainable React components.
+- Use Tailwind CSS for responsive styling.
+- Fetch and display skip data dynamically from the provided API.
+- Focus and prioritize on accessibility and mobile-first design principles.
+
+---
