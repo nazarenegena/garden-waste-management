@@ -23,9 +23,9 @@ This is a Coding Challenge.
 - Clean and maintainable React code
 - Enhanced user experience with improved layout and visual hierarchy.
 
-## 🧠 My Approach
+## My Approach
 
-- Brake down the UI into reusable and maintainable React components.
+- Restructure the UI into reusable and maintainable React components.
 - Use Tailwind CSS for responsive styling.
 - Fetch and display skip data dynamically from the provided API.
 - Focus and prioritize on accessibility and mobile-first design principles.
