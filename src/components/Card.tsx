@@ -1,5 +1,6 @@
 import Image1 from "../assets/image1.jpg";
 import { CiWarning } from "react-icons/ci";
+import { GoCheckCircleFill } from "react-icons/go";
 
 type ICardProps = {
   id?: number;
@@ -13,6 +14,8 @@ type ICardProps = {
   updated_at: string;
   allowed_on_road: boolean;
   allows_heavy_waste: boolean;
+  onClick: () => void;
+  isChecked?: boolean;
 };
 
 const Card = ({
@@ -23,12 +26,21 @@ const Card = ({
   postcode,
   allowed_on_road,
   allows_heavy_waste,
+  onClick,
+  isChecked,
 }: ICardProps) => {
   // Calculating the total price
   const totalPrice = price_before_vat * (1 + vat / 100);
 
   return (
-    <div className="w-full max-w-sm bg-neutral/60 dark:bg-base/25 rounded-xl shadow-xl border border-primary/10 dark:border-neutral/10 cursor-pointer flex flex-col px-4 pt-4 relative overflow-hidden transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl hover:scale-[1.02]">
+    <div
+      className={`w-full max-w-sm bg-neutral/60 dark:bg-base/25 rounded-xl shadow-xl cursor-pointer flex flex-col px-4 pt-4 relative overflow-hidden transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl hover:scale-[1.02] ${
+        isChecked
+          ? "border border-emerald-700 shadow-emerald/20 dark:border-emerald/20"
+          : "border border-primary/10 dark:border-neutral/10"
+      }`}
+      onClick={onClick}
+    >
       {/* Card Image */}
       <div className="relative">
         <img
@@ -45,7 +57,7 @@ const Card = ({
 
       {/* Card Content */}
       <div className="p-4 flex flex-col flex-grow">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-10">
           <div>
             {/* Title */}
             <h3 className="font-semibold text-lg md:text-xl dark:text-white text-black font-mono">
@@ -93,6 +105,12 @@ const Card = ({
             </div>
           )}
         </div>
+
+        {isChecked && (
+          <div className="absolute bottom-1 right-0 rounded-full p-1 ">
+            <GoCheckCircleFill size={24} color="#00A63D" />
+          </div>
+        )}
       </div>
     </div>
   );

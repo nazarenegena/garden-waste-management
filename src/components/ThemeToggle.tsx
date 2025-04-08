@@ -25,7 +25,7 @@ const ThemeToggle = () => {
     <div className="transition-colors">
       <button
         onClick={toggleDarkMode}
-        className="cursor-pointer bg-secondary dark:bg-secondary/20 rounded-full p-2"
+        className="cursor-pointer bg-neutral/25 dark:bg-secondary/20 rounded-full p-2"
       >
         {darkMode ? (
           <IoIosSunny size={28} color="#F5B214" />

@@ -1,14 +1,23 @@
-import NavBar from "./components/NavBar";
-import Skips from "./components/Skips";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PermitCheck from "./components/PermitCheck";
+import ThemeToggle from "./components/ThemeToggle";
+import SelectSkip from "./components/SelectSkip";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-black text-background dark:text-neutral transition-colors duration-300">
-      <NavBar />
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <Skips />
-      </main>
-    </div>
+    <Router>
+      <div className="min-h-screen flex flex-col bg-white dark:bg-black text-background dark:text-neutral transition-colors duration-300">
+        <ThemeToggle />
+
+        {/* <NavBar /> */}
+        <main className="flex-grow justify-center items-center ">
+          <Routes>
+            <Route path="/" element={<SelectSkip />} />
+            <Route path="/permit-check" element={<PermitCheck />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

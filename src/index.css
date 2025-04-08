@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 
@@ -12,8 +13,6 @@
   --color-neutral: #CDD2D0;
   --color-base: #454F4E;
 }
-
-
 
 
 
