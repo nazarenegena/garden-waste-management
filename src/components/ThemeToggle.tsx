@@ -21,16 +21,18 @@ const ThemeToggle = () => {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+
   return (
-    <div className="transition-colors">
+    <div className="transition-all duration-300 absolute  lg:left-4 top-5 left-2 z-50">
       <button
         onClick={toggleDarkMode}
-        className="cursor-pointer bg-neutral/25 dark:bg-secondary/20 rounded-full p-2"
+        className="cursor-pointer bg-neutral/25 dark:bg-secondary/20 rounded-full p-2 border border-base/20 hover:scale-105 transition-transform"
+        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
       >
         {darkMode ? (
-          <IoIosSunny size={28} color="#F5B214" />
+          <IoIosSunny className="lg:w-5 lg:h-5 w-4 h-4" color="#F5B214" />
         ) : (
-          <FaMoon size={28} color="#1F2E25" />
+          <FaMoon className="lg:w-5 lg:h-5 w-4 h-4" color="#1F2E25" />
         )}
       </button>
     </div>
