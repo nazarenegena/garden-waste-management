@@ -25,9 +25,47 @@ This is a Coding Challenge.
 
 ## My Approach
 
-- Restructure the UI into reusable and maintainable React components.
-- Use Tailwind CSS for responsive styling.
-- Fetch and display skip data dynamically from the provided API.
-- Focus and prioritize on accessibility and mobile-first design principles.
+**Component Architecture & Code Structure**
 
----
+Destructured the page into reusable React components.
+
+Created types to ensure scalable, type-safe development.
+
+Clear file and folder structures for better maintainability.
+
+**Visual Redesign**
+
+Added Dark and Light mode for different screen views and eye comfort.
+
+Applied consistent spacing-padding, and added visual hierarchy.
+
+Enhanced the typography and color contrast for readability and clarity.
+
+In-cooperated hover, focus, and active states for interactive elements.
+
+Added visual cues such as checked in card selection to improve flow clarity.
+
+**Responsive Mobile-First Design**
+
+Integrated Tailwind’s responsive utilities to ensure layout adjusts fluidly across breakpoints.
+
+Prioritized mobile usability by reducing padding and margin clutter on small screens.
+
+**Data Integration**
+
+Fetched skip data from the provided API endpoint and rendered dynamically.
+
+Handled loading states and errors to ensure a smooth UX.
+
+**Accessibility Considerations**
+
+Applied color contrast between elements.
+
+# Summary
+
+This project has been a fun practical challenge. I have greatly enjoyed working on it.
+It has pushed me to balance UI/UX improvements while maintaining core functionality.
+
+My personal goal was to create a clean, modern layout that feels intuitive and visually engaging.
+
+Overall, it was a great opportunity to apply both design thinking and frontend engineering skills to a real-world scenario.
