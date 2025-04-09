@@ -4,12 +4,11 @@ import { ICard } from "../types/ICard";
 import { CgUnavailable } from "react-icons/cg";
 
 type IdProp = {
-  id?: number;
   onSkipSelect: (skip: ICard) => void;
   selectedSkip?: ICard | null;
 };
 
-const Skips = ({ id, onSkipSelect, selectedSkip }: IdProp) => {
+const Skips = ({ onSkipSelect, selectedSkip }: IdProp) => {
   const [cards, setCards] = useState<ICard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -90,28 +89,25 @@ const Skips = ({ id, onSkipSelect, selectedSkip }: IdProp) => {
   }
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="dark:bg-secondary/15 bg-neutral/25 z-50 lg:w-[80rem] md:w-[64rem] w-full flex justify-center py-8 rounded-sm shadow-inset">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
-          {cards.map((card: ICard) => (
-            <Card
-              key={card.id}
-              id={id}
-              hire_period_days={card.hire_period_days}
-              price_before_vat={card.price_before_vat}
-              vat={card.vat}
-              postcode={card.postcode}
-              size={card.size}
-              forbidden={card.forbidden}
-              created_at={card.created_at}
-              updated_at={card.updated_at}
-              allowed_on_road={card.allowed_on_road}
-              allows_heavy_waste={card.allows_heavy_waste}
-              onClick={() => onSkipSelect(card)}
-              isChecked={selectedSkip?.id === card.id}
-            />
-          ))}
-        </div>
+    <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {cards.map((card: ICard) => (
+          <Card
+            key={card.id}
+            hire_period_days={card.hire_period_days}
+            price_before_vat={card.price_before_vat}
+            vat={card.vat}
+            postcode={card.postcode}
+            size={card.size}
+            forbidden={card.forbidden}
+            created_at={card.created_at}
+            updated_at={card.updated_at}
+            allowed_on_road={card.allowed_on_road}
+            allows_heavy_waste={card.allows_heavy_waste}
+            onClick={() => onSkipSelect(card)}
+            isChecked={selectedSkip?.id === card.id}
+          />
+        ))}
       </div>
     </div>
   );

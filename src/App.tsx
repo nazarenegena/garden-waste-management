@@ -8,9 +8,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col bg-white dark:bg-black text-background dark:text-neutral transition-colors duration-300">
         <ThemeToggle />
-
-        {/* <NavBar /> */}
-        <main className="flex-grow justify-center items-center ">
+        <main className="flex-grow justify-center items-center pb-40">
           <Routes>
             <Route path="/" element={<SelectSkip />} />
             <Route path="/permit-check" element={<PermitCheck />} />
