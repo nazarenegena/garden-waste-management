@@ -23,7 +23,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <div className="transition-all duration-300 absolute  lg:left-4 top-5 left-2 z-50">
+    <div className="transition-all duration-300 absolute lg:left-4 top-5 md:left-2 left-1 z-50">
       <button
         onClick={toggleDarkMode}
         className="cursor-pointer bg-neutral/25 dark:bg-secondary/20 rounded-full p-2 border border-base/20 hover:scale-105 transition-transform"
