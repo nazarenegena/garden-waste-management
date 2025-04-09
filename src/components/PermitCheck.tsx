@@ -27,12 +27,12 @@ const PermitCheck = () => {
 
       <div className="flex justify-between mt-20">
         <button
-          className="px-6 py-2 bg-base/70 text-white rounded-md hover:bg-base/40"
+          className="px-6 py-2 bg-base/70 text-white rounded-md hover:bg-base/40 cursor-pointer"
           onClick={() => navigate("/")}
         >
           Back
         </button>
-        <button className="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400">
+        <button className="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 cursor-pointer">
           Continue
         </button>
       </div>
